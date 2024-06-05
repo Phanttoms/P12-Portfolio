@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Header() {
+interface HeaderProps {
+	scrollToSection: (id: string) => void;
+}
+
+export default function Header({ scrollToSection }: HeaderProps) {
 	return (
 		<HeaderStyle>
 			<Link to="/">
@@ -10,7 +14,7 @@ export default function Header() {
 			<nav className="header__navbar">
 				<ul>
 					<li>
-						<a>Présentation</a>
+						<a onClick={() => scrollToSection("section1")}>Présentation</a>
 					</li>
 					<li>
 						<a>Compétence</a>
