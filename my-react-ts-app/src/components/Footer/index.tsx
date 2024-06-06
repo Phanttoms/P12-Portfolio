@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import gitHubLogo from "../../assets/images/github-mark-white.png";
+import { theme } from "../../assets/style/Theme";
 
 export default function Footer() {
 	return (
@@ -22,7 +23,7 @@ const FooterStyle = styled.footer`
 	justify-content: center;
 	flex-direction: column;
 	gap: 1rem;
-	background-color: black;
+	background-color: ${theme.colors.black};
 	height: 10rem;
 	width: 100%;
 	.footer__logo {
