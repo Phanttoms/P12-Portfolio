@@ -52,58 +52,68 @@ export default function Slider() {
 			onMouseLeave={handleMouseLeave}
 			id="section2"
 		>
-			<button className="slider__arrow slider__arrow--left" onClick={prevSlide}>
-				&#10094;
-			</button>
-			<div className="slider__container">
-				{slides.map((slide, index) => (
-					<div
-						className="slider__container__imgBox"
-						key={index}
-						style={{ display: index === currentIndex ? "block" : "none" }}
-					>
-						<img
-							className="slider__container__imgBox--img"
-							src={slide.imageUrl}
-							alt={`Slide ${index + 1}`}
-						/>
-					</div>
-				))}
+			<h2>Compétence</h2>
+			<div className="slider">
+				<button
+					className="slider__arrow slider__arrow--left"
+					onClick={prevSlide}
+				>
+					&#10094;
+				</button>
+				<div className="slider__container">
+					{slides.map((slide, index) => (
+						<div
+							className="slider__container__imgBox"
+							key={index}
+							style={{ display: index === currentIndex ? "block" : "none" }}
+						>
+							<img
+								className="slider__container__imgBox--img"
+								src={slide.imageUrl}
+								alt={`Slide ${index + 1}`}
+							/>
+						</div>
+					))}
+				</div>
+				<button
+					className="slider__arrow slider__arrow--right"
+					onClick={nextSlide}
+				>
+					&#10095;
+				</button>
 			</div>
-			<button
-				className="slider__arrow slider__arrow--right"
-				onClick={nextSlide}
-			>
-				&#10095;
-			</button>
 		</SliderStyle>
 	);
 }
 
 const SliderStyle = styled.section`
 	width: 100%;
-	height: 30rem;
+	height: auto;
 	display: flex;
-	justify-content: center;
-	.slider__container {
+	flex-direction: column;
+	align-items: center;
+	.slider {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: auto;
 		width: 60%;
+	}
+	.slider__container {
+		width: 100%;
+		height: 40rem;
 		&__imgBox {
 			width: 100%;
+			height: auto;
 			&--img {
 				width: 100%;
-				height: 30rem;
+				height: 40rem;
 				object-fit: cover;
 			}
 		}
 	}
 	.slider__arrow {
 		position: relative;
-		top: 55%;
-		transform: translateY(-50%);
 		background: transparent;
 		border: none;
 		font-size: 24px;
