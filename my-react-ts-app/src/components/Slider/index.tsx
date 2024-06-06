@@ -50,6 +50,7 @@ export default function Slider() {
 		<SliderStyle
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
+			id="section2"
 		>
 			<button className="slider__arrow slider__arrow--left" onClick={prevSlide}>
 				&#10094;

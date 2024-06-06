@@ -10,7 +10,7 @@ export default function Footer() {
 				</a>
 			</div>
 			<div className="footer__text">
-				2024 Yohan PRUCHE, Tous droits rèservés.
+				2024 Yohan PRUCHE, site réalisé avec Vite, React, et TypeScript.
 			</div>
 		</FooterStyle>
 	);

@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface HeaderProps {
-	scrollToSection: (id: string) => void;
-}
+const scrollToSection = (id: string) => {
+	const element = document.getElementById(id);
+	if (element) {
+		element.scrollIntoView({ behavior: "smooth" });
+	}
+};
 
-export default function Header({ scrollToSection }: HeaderProps) {
+export default function Header() {
 	return (
 		<HeaderStyle>
 			<Link to="/">
@@ -17,7 +20,7 @@ export default function Header({ scrollToSection }: HeaderProps) {
 						<a onClick={() => scrollToSection("section1")}>Présentation</a>
 					</li>
 					<li>
-						<a>Compétence</a>
+						<a onClick={() => scrollToSection("section2")}>Compétence</a>
 					</li>
 					<li>
 						<a>Mes Projets</a>
