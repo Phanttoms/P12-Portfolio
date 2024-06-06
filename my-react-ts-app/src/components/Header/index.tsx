@@ -23,7 +23,7 @@ export default function Header() {
 						<a onClick={() => scrollToSection("section2")}>Compétence</a>
 					</li>
 					<li>
-						<a>Mes Projets</a>
+						<a onClick={() => scrollToSection("section3")}>Mes Projets</a>
 					</li>
 					<li>
 						<a>Contact</a>
