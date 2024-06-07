@@ -22,12 +22,8 @@ const PresentationStyle = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2rem;
 	padding: 2rem;
 	.presentation__title {
-	}
-	hr {
-		width: 20%;
 	}
 	.presentation__content {
 		&--text {

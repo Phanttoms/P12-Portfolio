@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -11,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
     li,
     h1,
     h2,
-    hr,
     p {
         margin: 0;
         padding: 0;
@@ -26,10 +26,17 @@ const GlobalStyle = createGlobalStyle`
     h2,
     li {
         font-family: "roboto", sans-serif;
+        color: ${theme.colors.purple}
     }
 
     p {
         font-family: "Open Sans", sans-serif;
+    }
+
+    hr {
+        color: ${theme.colors.green};
+        width: 20%;
+        margin: 2rem 0;
     }
 `;
 

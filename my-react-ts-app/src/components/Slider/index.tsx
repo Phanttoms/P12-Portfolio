@@ -3,6 +3,7 @@ import chien1 from "../../assets/images/chien1.webp";
 import chien2 from "../../assets/images/chien2.webp";
 import chien3 from "../../assets/images/chien3.jpg";
 import styled from "styled-components";
+import { theme } from "../../assets/style/Theme";
 
 interface Slide {
 	imageUrl: string;
@@ -52,13 +53,14 @@ export default function Slider() {
 			onMouseLeave={handleMouseLeave}
 			id="section2"
 		>
-			<h2>Compétence</h2>
+			<h2 className="slider__title">Compétence</h2>
+			<hr />
 			<div className="slider">
 				<button
 					className="slider__arrow slider__arrow--left"
 					onClick={prevSlide}
 				>
-					&#10094;
+					{"<"}
 				</button>
 				<div className="slider__container">
 					{slides.map((slide, index) => (
@@ -79,7 +81,7 @@ export default function Slider() {
 					className="slider__arrow slider__arrow--right"
 					onClick={nextSlide}
 				>
-					&#10095;
+					{">"}
 				</button>
 			</div>
 		</SliderStyle>
@@ -92,12 +94,15 @@ const SliderStyle = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: ${theme.colors.grey};
+	padding: 2rem 0;
 	.slider {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: auto;
-		width: 60%;
+		width: 60rem;
+		margin-top: 2rem;
 	}
 	.slider__container {
 		width: 100%;
@@ -114,15 +119,21 @@ const SliderStyle = styled.section`
 	}
 	.slider__arrow {
 		position: relative;
-		background: transparent;
+		background-color: ${theme.colors.black};
+		height: 40rem;
+		width: 5rem;
 		border: none;
 		font-size: 24px;
+		border: 0.1rem solid ${theme.colors.green};
 		cursor: pointer;
+		color: ${theme.colors.purple};
 	}
 	.slider__arrow--left {
-		left: -2%;
+		left: 0%;
+		border-radius: 50% 0 0 50%;
 	}
 	.slider__arrow--right {
-		right: -2%;
+		right: 0%;
+		border-radius: 0 50% 50% 0;
 	}
 `;
