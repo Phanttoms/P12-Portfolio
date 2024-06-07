@@ -1,5 +1,7 @@
 const colors = {
-	black: "#000000",
+	black: "#202020",
+	purple: "#8c52ff",
+	green: "#00bf63",
 };
 
 export const theme = {

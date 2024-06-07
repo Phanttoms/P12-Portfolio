@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
 	    display: flex;
 	    flex-direction: column;
+        margin-top: 6rem;
     }
     ul,
     li,
@@ -18,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color: black;
         cursor: pointer;
     }
 
