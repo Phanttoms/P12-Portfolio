@@ -57,7 +57,7 @@ const HeaderStyle = styled.header`
 	left: 0;
 	border: 0.1rem solid ${theme.colors.green};
 	box-sizing: border-box;
-
+	z-index: 1000;
 	.header__title {
 		position: absolute;
 		width: 1px;
