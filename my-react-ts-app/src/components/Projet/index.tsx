@@ -1,21 +1,50 @@
 import styled from "styled-components";
 import Card from "../Card";
-import img1 from "../../assets/images/projetRidingCities.png";
-import img2 from "../../assets/images/projetBooki.png";
-import img3 from "../../assets/images/projetOhmyfood.png";
-import img4 from "../../assets/images/projetPrintIt.png";
+import Modal from "../Modal";
+
+import data from "../../data/projet.json";
+import { useState } from "react";
+
+interface Project {
+	id: string;
+	nom: string;
+	image: string;
+	description: string;
+}
 
 export default function Projet() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+	const handleCardClick = (project: Project) => {
+		setSelectedProject(project);
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+		setSelectedProject(null);
+	};
 	return (
 		<ProjetStyle id="section3">
 			<h2 className="projet__title">Mes Projets</h2>
 			<hr />
 			<div className="projet__container">
-				<Card url={img1} title="Riding Cities" />
-				<Card url={img2} title="Booki" />
-				<Card url={img3} title="Ohmyfood" />
-				<Card url={img4} title="Print It" />
+				{data.map((project: Project) => (
+					<Card
+						key={project.id}
+						id={project.id}
+						url={project.image}
+						title={project.nom}
+						onClick={() => handleCardClick(project)}
+					/>
+				))}
 			</div>
+			<Modal
+				isOpen={isModalOpen}
+				onClose={handleCloseModal}
+				content={selectedProject}
+			/>
 		</ProjetStyle>
 	);
 }
