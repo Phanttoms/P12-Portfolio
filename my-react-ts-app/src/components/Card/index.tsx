@@ -17,7 +17,7 @@ export default function Card({
 			<div>
 				<p>{"[+]"}</p>
 			</div>
-			<img src={`src/assets/images/${url}`} alt={title} />
+			<img src={`${url}`} alt={title} />
 
 			<h3>{title}</h3>
 		</CardStyle>

@@ -21,7 +21,7 @@ const Modal = ({
 		<Overlay>
 			<ModalContent id={content.id}>
 				<button onClick={onClose}>Close</button>
-				<img src={`src/assets/images/${content.image}`} alt={content.nom} />
+				<img src={`${content.image}`} alt={content.nom} />
 				<h2>{content.nom}</h2>
 				<p>{content.description}</p>
 			</ModalContent>

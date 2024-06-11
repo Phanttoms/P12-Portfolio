@@ -2,8 +2,36 @@ import styled from "styled-components";
 import Card from "../Card";
 import Modal from "../Modal";
 
-import data from "../../data/projet.json";
+// import data from "../../data/projet.json";
+import { data } from "../../data/projet";
 import { useState } from "react";
+
+// const data = [
+// 	{
+// 		id: "1",
+// 		nom: "Riding Cities",
+// 		image: "projetRidingCities.png",
+// 		description: "une description",
+// 	},
+// 	{
+// 		id: "2",
+// 		nom: "Booki",
+// 		image: "projetBooki.png",
+// 		description: "une description",
+// 	},
+// 	{
+// 		id: "3",
+// 		nom: "Ohmyfood",
+// 		image: "projetOhmyfood.png",
+// 		description: "une description",
+// 	},
+// 	{
+// 		id: "4",
+// 		nom: "Print It",
+// 		image: "projetPrintIt.png",
+// 		description: "une description",
+// 	},
+// ];
 
 interface Project {
 	id: string;
