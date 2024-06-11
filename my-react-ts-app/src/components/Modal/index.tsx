@@ -1,5 +1,6 @@
 // src/components/Modal.jsx
 import styled from "styled-components";
+import { theme } from "../../assets/style/Theme";
 
 const Modal = ({
 	isOpen,
@@ -20,10 +21,21 @@ const Modal = ({
 	return (
 		<Overlay>
 			<ModalContent id={content.id}>
-				<button onClick={onClose}>Close</button>
-				<img src={`${content.image}`} alt={content.nom} />
-				<h2>{content.nom}</h2>
-				<p>{content.description}</p>
+				<button className="modal__button" onClick={onClose}>
+					X
+				</button>
+				<div className="modal__content">
+					<div className="modal__content--text">
+						<h3>{content.nom}</h3>
+						<hr />
+						<p>{content.description}</p>
+					</div>
+					<img
+						className="modal__content--img"
+						src={`${content.image}`}
+						alt={content.nom}
+					/>
+				</div>
 			</ModalContent>
 		</Overlay>
 	);
@@ -49,14 +61,10 @@ const ModalContent = styled.div`
 	border-radius: 8px;
 	position: relative;
 	width: 90%;
-	max-width: 500px;
-
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-
-	button {
+	max-width: 45rem;
+	height: auto;
+	border: 0.1rem solid ${theme.colors.green};
+	.modal__button {
 		position: absolute;
 		top: 10px;
 		right: 10px;
@@ -64,5 +72,23 @@ const ModalContent = styled.div`
 		border: none;
 		font-size: 1.2rem;
 		cursor: pointer;
+		color: black;
+	}
+	.modal__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: white;
+		&--img {
+			max-width: 60%;
+			height: auto;
+			object-fit: cover;
+		}
+		&--text {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 `;
