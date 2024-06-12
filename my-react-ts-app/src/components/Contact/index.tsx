@@ -91,12 +91,14 @@ const ContactStyle = styled.section`
 		flex-direction: column;
 		min-width: 35%;
 		gap: 1rem;
-		background-color: ${theme.colors.black};
+		background: linear-gradient(145deg, #444, #222);
 		padding: 2rem;
 		border-radius: 1rem;
 		margin: auto;
 		color: ${theme.colors.green};
 		border: 0.1rem solid ${theme.colors.green};
+		box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+			inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
 		&__content {
 			display: flex;
 			flex-direction: column;
@@ -114,12 +116,27 @@ const ContactStyle = styled.section`
 			padding: 1rem;
 			border: none;
 			border-radius: 0.5rem;
-			background-color: ${theme.colors.green};
+			background: linear-gradient(
+				145deg,
+				#00bf63,
+				#008000
+			); /* Gradient for metallic effect */
+			color: ${theme.colors.black};
 			cursor: pointer;
 			font-size: 1.2rem;
 			align-self: center;
+			box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+				inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
+			transition: all 0.3s ease;
+
 			&:hover {
-				background-color: lightgreen;
+				background: linear-gradient(
+					145deg,
+					#00bf63,
+					#006600
+				); /* Slightly brighter on hover */
+				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+					inset -1px -1px 2px rgba(0, 0, 0, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.7);
 			}
 		}
 	}

@@ -25,17 +25,17 @@ export default function Header() {
 			<h1 className="header__title">Pruche Yohan</h1>
 			<nav className="header__navbar">
 				<ul>
-					<li>
-						<a onClick={() => scrollToSection("section1")}>Présentation</a>
+					<li onClick={() => scrollToSection("section1")}>
+						<a>Présentation</a>
 					</li>
-					<li>
-						<a onClick={() => scrollToSection("section2")}>Compétence</a>
+					<li onClick={() => scrollToSection("section2")}>
+						<a>Compétence</a>
 					</li>
-					<li>
-						<a onClick={() => scrollToSection("section3")}>Mes Projets</a>
+					<li onClick={() => scrollToSection("section3")}>
+						<a>Mes Projets</a>
 					</li>
-					<li>
-						<a onClick={() => scrollToSection("section4")}>Contact</a>
+					<li onClick={() => scrollToSection("section4")}>
+						<a>Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -82,12 +82,24 @@ const HeaderStyle = styled.header`
 			padding-right: 2rem;
 			box-sizing: border-box;
 			li {
-				background-color: ${theme.colors.black};
-				border: 0.1rem solid ${theme.colors.green};
 				width: 7rem;
 				padding: 1rem;
 				color: ${theme.colors.purple};
 				border-radius: 30% 0%;
+				background: linear-gradient(145deg, #444, #222);
+				border: 1px solid ${theme.colors.green};
+				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+					inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
+				transition: all 0.3s ease;
+				cursor: pointer;
+
+				&:hover {
+					background: linear-gradient(145deg, #555, #333);
+					box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+						inset -1px -1px 2px rgba(0, 0, 0, 0.8),
+						2px 2px 5px rgba(0, 0, 0, 0.7);
+					transform: translateY(-2px);
+				}
 			}
 		}
 	}

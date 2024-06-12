@@ -14,7 +14,7 @@ export default function Card({
 }) {
 	return (
 		<CardStyle id={id} onClick={onClick}>
-			<div className="card__close">
+			<div className="card__open">
 				<p>{"[+]"}</p>
 			</div>
 			<img className="card__image" src={`${url}`} alt={title} />
@@ -34,7 +34,16 @@ const CardStyle = styled.div`
 	border: 0.1rem solid ${theme.colors.green};
 	flex-direction: column;
 	cursor: pointer;
-	.card__close {
+	position: relative;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	background-color: white;
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+		transform: translateY(-0.5rem);
+	}
+	.card__open {
 		position: absolute;
 		display: flex;
 		width: 20rem;
@@ -58,10 +67,13 @@ const CardStyle = styled.div`
 	}
 	.card__title {
 		color: ${theme.colors.purple};
-		background-color: ${theme.colors.black};
 		width: 100%;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		text-align: center;
+		background: linear-gradient(145deg, #444, #222);
+		border-top: 1px solid #666;
+		box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+			inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
 	}
 `;
