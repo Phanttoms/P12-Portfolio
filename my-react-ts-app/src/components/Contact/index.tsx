@@ -25,7 +25,7 @@ export default function Contact() {
 	};
 
 	return (
-		<ContactStyle>
+		<ContactStyle id="section4">
 			<h2>Contact</h2>
 			<hr />
 			<form onSubmit={handleSubmit} className="form">

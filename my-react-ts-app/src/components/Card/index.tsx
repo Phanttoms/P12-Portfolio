@@ -13,13 +13,13 @@ export default function Card({
 	onClick: React.MouseEventHandler<HTMLDivElement>;
 }) {
 	return (
-		<CardStyle className="projet__container__card" id={id} onClick={onClick}>
-			<div>
+		<CardStyle id={id} onClick={onClick}>
+			<div className="card__close">
 				<p>{"[+]"}</p>
 			</div>
-			<img src={`${url}`} alt={title} />
+			<img className="card__image" src={`${url}`} alt={title} />
 
-			<h3>{title}</h3>
+			<h3 className="card__title">{title}</h3>
 		</CardStyle>
 	);
 }
@@ -34,7 +34,7 @@ const CardStyle = styled.div`
 	border: 0.1rem solid ${theme.colors.green};
 	flex-direction: column;
 	cursor: pointer;
-	div {
+	.card__close {
 		position: absolute;
 		display: flex;
 		width: 20rem;
@@ -51,12 +51,12 @@ const CardStyle = styled.div`
 			border: 0.1rem solid ${theme.colors.green};
 		}
 	}
-	img {
+	.card__image {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
-	h3 {
+	.card__title {
 		color: ${theme.colors.purple};
 		background-color: ${theme.colors.black};
 		width: 100%;
