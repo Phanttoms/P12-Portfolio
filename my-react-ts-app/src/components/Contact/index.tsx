@@ -117,7 +117,7 @@ const ContactStyle = styled.section`
 			border: none;
 			border-radius: 0.5rem;
 			background: linear-gradient(145deg, #00bf63, #008000);
-			color: ${theme.colors.black};
+			color: white;
 			cursor: pointer;
 			font-size: 1.2rem;
 			align-self: center;
