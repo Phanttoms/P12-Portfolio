@@ -31,7 +31,7 @@ export default function Contact() {
 			<form onSubmit={handleSubmit} className="form">
 				<div className="form__content">
 					<label htmlFor="name" className="form__content--title">
-						Nom
+						Nom: (obligatoire)
 					</label>
 					<input
 						className="form__content--input"
@@ -45,7 +45,7 @@ export default function Contact() {
 				</div>
 				<div className="form__content">
 					<label htmlFor="email" className="form__content--title">
-						Email
+						Email: (obligatoire)
 					</label>
 					<input
 						className="form__content--input"
@@ -59,7 +59,7 @@ export default function Contact() {
 				</div>
 				<div className="form__content">
 					<label htmlFor="message" className="form__content--title">
-						Message
+						Message: (obligatoire)
 					</label>
 					<textarea
 						className="form__content--input"
@@ -89,6 +89,7 @@ const ContactStyle = styled.section`
 	.form {
 		display: flex;
 		flex-direction: column;
+		min-width: 35%;
 		gap: 1rem;
 		background-color: ${theme.colors.black};
 		padding: 2rem;

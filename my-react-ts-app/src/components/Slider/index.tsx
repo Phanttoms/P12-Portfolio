@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import chien1 from "../../assets/images/chien1.webp";
-import chien2 from "../../assets/images/chien2.webp";
-import chien3 from "../../assets/images/chien3.jpg";
+import chien1 from "../../assets/images/slider1.png";
+import chien2 from "../../assets/images/slider2.png";
+import chien3 from "../../assets/images/slider3.png";
 import styled from "styled-components";
 import { theme } from "../../assets/style/Theme";
 
@@ -102,25 +102,24 @@ const SliderStyle = styled.section`
 		align-items: center;
 		height: auto;
 		width: 60rem;
-		margin-top: 2rem;
 	}
 	.slider__container {
 		width: 100%;
-		height: 40rem;
+		height: 34.2rem;
 		&__imgBox {
 			width: 100%;
 			height: auto;
 			&--img {
 				width: 100%;
-				height: 40rem;
-				object-fit: cover;
+				height: auto;
+				object-fit: contain;
 			}
 		}
 	}
 	.slider__arrow {
 		position: relative;
 		background-color: ${theme.colors.black};
-		height: 40rem;
+		height: 34.2rem;
 		width: 5rem;
 		border: none;
 		font-size: 24px;
