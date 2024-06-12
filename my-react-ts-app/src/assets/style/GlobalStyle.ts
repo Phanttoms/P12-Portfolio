@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     h1,
     h2,
     h3,
-    li {
+    li, button, label {
         font-family: "roboto", sans-serif;
         color: ${theme.colors.purple}
     }
