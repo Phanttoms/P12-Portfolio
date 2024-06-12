@@ -116,11 +116,7 @@ const ContactStyle = styled.section`
 			padding: 1rem;
 			border: none;
 			border-radius: 0.5rem;
-			background: linear-gradient(
-				145deg,
-				#00bf63,
-				#008000
-			); /* Gradient for metallic effect */
+			background: linear-gradient(145deg, #00bf63, #008000);
 			color: ${theme.colors.black};
 			cursor: pointer;
 			font-size: 1.2rem;
@@ -130,11 +126,7 @@ const ContactStyle = styled.section`
 			transition: all 0.3s ease;
 
 			&:hover {
-				background: linear-gradient(
-					145deg,
-					#00bf63,
-					#006600
-				); /* Slightly brighter on hover */
+				background: linear-gradient(145deg, #00bf63, #006600);
 				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2),
 					inset -1px -1px 2px rgba(0, 0, 0, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.7);
 			}
