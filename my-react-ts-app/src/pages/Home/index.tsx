@@ -3,14 +3,14 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Presentation from "../../components/Presentation";
 import Projet from "../../components/Projet";
-import Slider from "../../components/Slider";
+import Skill from "../../components/Skill";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
 			<Presentation />
-			<Slider />
+			<Skill />
 			<Projet />
 			<Contact />
 			<Footer />
