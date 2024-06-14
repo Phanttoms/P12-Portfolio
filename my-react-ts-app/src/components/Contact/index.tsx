@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { theme } from "../../assets/style/Theme";
+import { useForm } from "@formspree/react";
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ export default function Contact() {
 		email: "",
 		message: "",
 	});
+
+	const [state, handleSubmit, reset] = useForm("mwkggrdy");
 
 	const handleChange = (
 		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,16 +22,28 @@ export default function Contact() {
 		}));
 	};
 
-	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		console.log(formData);
-	};
+	useEffect(() => {
+		if (state.succeeded) {
+			alert("Votre message a été envoyé avec succès!");
+			setFormData({
+				name: "",
+				email: "",
+				message: "",
+			});
+			reset();
+		}
+	}, [state.succeeded, reset]);
 
 	return (
 		<ContactStyle id="section4">
 			<h2>Contact</h2>
 			<hr />
-			<form onSubmit={handleSubmit} className="form">
+			<form
+				onSubmit={handleSubmit}
+				className="form"
+				action="https://formspree.io/f/mwkggrdy"
+				method="POST"
+			>
 				<div className="form__content">
 					<label htmlFor="name" className="form__content--title">
 						Nom: (obligatoire)
@@ -70,8 +85,14 @@ export default function Contact() {
 						required
 					></textarea>
 				</div>
-				<button type="submit" className="form__submitButton">
-					Envoyer
+				<button
+					type="submit"
+					className="form__submitButton"
+					disabled={state.submitting}
+				>
+					<div>
+						<p>Envoyer</p>
+					</div>
 				</button>
 			</form>
 		</ContactStyle>
@@ -111,23 +132,63 @@ const ContactStyle = styled.section`
 			}
 		}
 		&__submitButton {
-			width: 15rem;
-			padding: 1rem;
+			width: 15.3rem;
+			height: 3.3rem;
 			border: none;
-			border-radius: 0.5rem;
-			background: linear-gradient(145deg, #00bf63, #008000);
-			color: white;
+			background: ${theme.colors.green};
 			cursor: pointer;
-			font-size: 1.2rem;
 			align-self: center;
-			box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-				inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
-			transition: all 0.3s ease;
-
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			&:hover {
-				background: linear-gradient(145deg, #00bf63, #006600);
-				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2),
-					inset -1px -1px 2px rgba(0, 0, 0, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.7);
+				clip-path: polygon(
+					0 10%,
+					15% 15%,
+					10% 0,
+					90% 0,
+					85% 15%,
+					100% 10%,
+					100% 90%,
+					85% 85%,
+					90% 100%,
+					10% 100%,
+					15% 85%,
+					0 90%
+				);
+			}
+			div {
+				background: linear-gradient(145deg, #6a0dad, #b15dfa);
+				width: 15rem;
+				height: 3rem;
+				color: white;
+				font-size: 1.4rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 0.1rem solid ${theme.colors.green};
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+					0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2),
+					inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+					inset -1px -1px 2px rgba(0, 0, 0, 0.5);
+				clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+				transition: 0.3s ease-in-out;
+				&:hover {
+					clip-path: polygon(
+						0 10%,
+						15% 15%,
+						10% 0,
+						90% 0,
+						85% 15%,
+						100% 10%,
+						100% 90%,
+						85% 85%,
+						90% 100%,
+						10% 100%,
+						15% 85%,
+						0 90%
+					);
+				}
 			}
 		}
 	}
