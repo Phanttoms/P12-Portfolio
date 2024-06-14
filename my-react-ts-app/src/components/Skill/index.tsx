@@ -2,6 +2,9 @@ import styled from "styled-components";
 import front1 from "../../assets/images/logos/logoHTML.png";
 import front2 from "../../assets/images/logos/logoCSS.png";
 import front3 from "../../assets/images/logos/logoJS.png";
+import front4 from "../../assets/images/logos/logoTypeScript.svg";
+import front5 from "../../assets/images/logos/logoReact.svg";
+import front6 from "../../assets/images/logos/logoSass.svg";
 
 import back1 from "../../assets/images/logos/logoNode.png";
 import back2 from "../../assets/images/logos/logoExpress.png";
@@ -10,6 +13,9 @@ import back3 from "../../assets/images/logos/logoMongoDB.png";
 import tool1 from "../../assets/images/logos/logoGit.png";
 import tool2 from "../../assets/images/logos/logoGitHub.png";
 import tool3 from "../../assets/images/logos/logoVercel.svg";
+import tool4 from "../../assets/images/logos/logoRedux.svg";
+import tool5 from "../../assets/images/logos/logoStyled.svg";
+import tool6 from "../../assets/images/logos/logoVite.svg";
 import { theme } from "../../assets/style/Theme";
 
 export default function Skill() {
@@ -23,6 +29,9 @@ export default function Skill() {
 					<img src={front1} className="skill__container__content--img" />
 					<img src={front2} className="skill__container__content--img" />
 					<img src={front3} className="skill__container__content--img" />
+					<img src={front4} className="skill__container__content--img" />
+					<img src={front5} className="skill__container__content--img" />
+					<img src={front6} className="skill__container__content--img" />
 				</div>
 				<div className="skill__container__content">
 					<h3 className="skill__container__content--title">Back-End</h3>
@@ -37,6 +46,9 @@ export default function Skill() {
 					<img src={tool1} className="skill__container__content--img" />
 					<img src={tool2} className="skill__container__content--img" />
 					<img src={tool3} className="skill__container__content--img" />
+					<img src={tool4} className="skill__container__content--img" />
+					<img src={tool5} className="skill__container__content--img" />
+					<img src={tool6} className="skill__container__content--img" />
 				</div>
 			</div>
 		</SkillStyle>
@@ -67,6 +79,9 @@ const SkillStyle = styled.section`
 			border: 0.1rem solid ${theme.colors.green};
 			background-color: white;
 			box-shadow: 2px 4px 5px rgba(12, 207, 12, 0.616);
+			gap: 1rem;
+			height: 100%;
+			padding-bottom: 1rem;
 			&--title {
 				background: linear-gradient(145deg, #444, #222);
 				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
