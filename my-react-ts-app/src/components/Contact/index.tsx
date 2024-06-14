@@ -79,7 +79,6 @@ export default function Contact() {
 }
 
 const ContactStyle = styled.section`
-	background-color: ${theme.colors.grey};
 	display: flex;
 	flex-direction: column;
 	align-items: center;

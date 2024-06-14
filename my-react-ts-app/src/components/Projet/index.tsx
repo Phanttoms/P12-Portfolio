@@ -3,6 +3,7 @@ import Card from "../Card";
 import Modal from "../Modal";
 import { data } from "../../data/projet";
 import { useState } from "react";
+import { theme } from "../../assets/style/Theme";
 
 interface Project {
 	id: string;
@@ -53,6 +54,7 @@ const ProjetStyle = styled.section`
 	flex-direction: column;
 	align-items: center;
 	padding: 2rem 0;
+	background-color: ${theme.colors.grey};
 	.projet__title {
 	}
 	.projet__container {

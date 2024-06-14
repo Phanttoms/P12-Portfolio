@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../assets/style/Theme";
 
 export default function Presentation() {
 	return (
@@ -23,6 +24,7 @@ const PresentationStyle = styled.section`
 	flex-direction: column;
 	align-items: center;
 	padding: 2rem;
+	background-color: ${theme.colors.grey};
 	.presentation__title {
 	}
 	.presentation__content {

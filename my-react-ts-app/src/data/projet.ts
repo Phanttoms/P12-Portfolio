@@ -1,7 +1,7 @@
-import img1 from "../assets/images/projetRidingCities.png";
-import img2 from "../assets/images/projetBooki.png";
-import img3 from "../assets/images/projetOhmyfood.png";
-import img4 from "../assets/images/projetPrintIt.png";
+import img1 from "../assets/images/projets/projetRidingCities.png";
+import img2 from "../assets/images/projets/projetBooki.png";
+import img3 from "../assets/images/projets/projetOhmyfood.png";
+import img4 from "../assets/images/projets/projetPrintIt.png";
 
 export const data = [
 	{

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../assets/images/logoSite.png";
+import logo from "../../assets/images/logos/logoSite.png";
 import { theme } from "../../assets/style/Theme";
 
 const scrollToSection = (id: string) => {
@@ -29,7 +29,7 @@ export default function Header() {
 						<a>Présentation</a>
 					</li>
 					<li onClick={() => scrollToSection("section2")}>
-						<a>Compétence</a>
+						<a>Compétences</a>
 					</li>
 					<li onClick={() => scrollToSection("section3")}>
 						<a>Mes Projets</a>

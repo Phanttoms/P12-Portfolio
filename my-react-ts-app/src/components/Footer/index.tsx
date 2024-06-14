@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import gitHubLogo from "../../assets/images/github-mark-white.png";
+import gitHubLogo from "../../assets/images/logos/github-mark-white.png";
 import { theme } from "../../assets/style/Theme";
 
 export default function Footer() {
