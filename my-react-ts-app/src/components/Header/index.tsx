@@ -26,16 +26,24 @@ export default function Header() {
 			<nav className="header__navbar">
 				<ul>
 					<li onClick={() => scrollToSection("section1")}>
-						<a>Présentation</a>
+						<div>
+							<a>Présentation</a>
+						</div>
 					</li>
 					<li onClick={() => scrollToSection("section2")}>
-						<a>Compétences</a>
+						<div>
+							<a>Compétences</a>
+						</div>
 					</li>
 					<li onClick={() => scrollToSection("section3")}>
-						<a>Mes Projets</a>
+						<div>
+							<a>Mes Projets</a>
+						</div>
 					</li>
 					<li onClick={() => scrollToSection("section4")}>
-						<a>Contact</a>
+						<div>
+							<a>Contact</a>
+						</div>
 					</li>
 				</ul>
 			</nav>
@@ -81,24 +89,40 @@ const HeaderStyle = styled.header`
 			justify-content: space-between;
 			padding-right: 2rem;
 			box-sizing: border-box;
+			gap: 1rem;
 			li {
-				width: 7rem;
-				padding: 1rem;
-				color: ${theme.colors.purple};
-				border-radius: 30% 0%;
-				background: linear-gradient(145deg, #444, #222);
-				border: 1px solid ${theme.colors.green};
-				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-					inset -1px -1px 2px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.5);
-				transition: all 0.3s ease;
-				cursor: pointer;
-
+				width: 7.2rem;
+				height: 3.2rem;
+				background-color: ${theme.colors.green};
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+				transition: 0.3s ease-in-out;
 				&:hover {
-					background: linear-gradient(145deg, #555, #333);
-					box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2),
-						inset -1px -1px 2px rgba(0, 0, 0, 0.8),
-						2px 2px 5px rgba(0, 0, 0, 0.7);
-					transform: translateY(-2px);
+					/* transform: scale(1.1); */
+					clip-path: polygon(70% 0, 100% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
+				}
+				div {
+					width: 7rem;
+					height: 3rem;
+					background: linear-gradient(145deg, #444, #222);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+					transition: 0.3s ease-in-out;
+					&:hover {
+						/* transform: scale(1.1); */
+						clip-path: polygon(
+							70% 0,
+							100% 30%,
+							100% 100%,
+							30% 100%,
+							0 70%,
+							0 0
+						);
+					}
 				}
 			}
 		}
