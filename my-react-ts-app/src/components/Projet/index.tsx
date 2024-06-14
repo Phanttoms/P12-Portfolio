@@ -10,6 +10,8 @@ interface Project {
 	nom: string;
 	image: string;
 	description: string;
+	type: any;
+	url: string;
 }
 
 export default function Projet() {
@@ -34,7 +36,7 @@ export default function Projet() {
 					<Card
 						key={project.id}
 						id={project.id}
-						url={project.image}
+						src={project.image}
 						title={project.nom}
 						onClick={() => handleCardClick(project)}
 					/>

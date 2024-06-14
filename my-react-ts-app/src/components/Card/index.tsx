@@ -3,12 +3,12 @@ import { theme } from "../../assets/style/Theme";
 
 export default function Card({
 	id,
-	url,
+	src,
 	title,
 	onClick,
 }: {
 	id: string;
-	url: string;
+	src: string;
 	title: string;
 	onClick: React.MouseEventHandler<HTMLDivElement>;
 }) {
@@ -17,7 +17,7 @@ export default function Card({
 			<div className="card__open">
 				<p>{"[+]"}</p>
 			</div>
-			<img className="card__image" src={`${url}`} alt={title} />
+			<img className="card__image" src={`${src}`} alt={title} />
 
 			<h3 className="card__title">{title}</h3>
 		</CardStyle>
