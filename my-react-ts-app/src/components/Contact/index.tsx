@@ -90,9 +90,7 @@ export default function Contact() {
 					className="form__submitButton"
 					disabled={state.submitting}
 				>
-					<div>
-						<p>Envoyer</p>
-					</div>
+					<p>Envoyer</p>
 				</button>
 			</form>
 		</ContactStyle>
@@ -124,6 +122,7 @@ const ContactStyle = styled.section`
 			flex-direction: column;
 			&--title {
 				margin-bottom: 0.5rem;
+				font-size: 1.2rem;
 			}
 			&--input {
 				padding: 1rem;
@@ -141,54 +140,17 @@ const ContactStyle = styled.section`
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: 0.3s ease-in-out;
+			border: 0.2rem solid ${theme.colors.purple};
+			color: white;
 			&:hover {
-				clip-path: polygon(
-					0 10%,
-					15% 15%,
-					10% 0,
-					90% 0,
-					85% 15%,
-					100% 10%,
-					100% 90%,
-					85% 85%,
-					90% 100%,
-					10% 100%,
-					15% 85%,
-					0 90%
-				);
+				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5),
+					inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 5px rgba(0, 0, 0, 0.3),
+					-2px -2px 5px rgba(255, 255, 255, 0.3);
+				transform: scale(1.05); /* Augmentez légèrement la taille du bouton */
 			}
-			div {
-				background: linear-gradient(145deg, #6a0dad, #b15dfa);
-				width: 15rem;
-				height: 3rem;
-				color: white;
-				font-size: 1.4rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border: 0.1rem solid ${theme.colors.green};
-				box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-					0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2),
-					inset 1px 1px 2px rgba(255, 255, 255, 0.2),
-					inset -1px -1px 2px rgba(0, 0, 0, 0.5);
-				clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-				transition: 0.3s ease-in-out;
-				&:hover {
-					clip-path: polygon(
-						0 10%,
-						15% 15%,
-						10% 0,
-						90% 0,
-						85% 15%,
-						100% 10%,
-						100% 90%,
-						85% 85%,
-						90% 100%,
-						10% 100%,
-						15% 85%,
-						0 90%
-					);
-				}
+			p {
+				font-size: 1.2rem;
 			}
 		}
 	}

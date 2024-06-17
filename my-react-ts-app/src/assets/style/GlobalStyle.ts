@@ -41,6 +41,10 @@ const GlobalStyle = createGlobalStyle`
         width: 20%;
         margin: 2rem 0;
     }
+
+    h2 {
+        font-size: 2.5rem;
+    }
 `;
 
 export default GlobalStyle;
