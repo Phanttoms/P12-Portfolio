@@ -46,9 +46,8 @@ const CardStyle = styled.div`
 	.card__open {
 		position: absolute;
 		display: flex;
-		width: 20rem;
-		height: 20rem;
-		justify-content: flex-end;
+		top: 0;
+		right: 0;
 		p {
 			background-color: ${theme.colors.black};
 			height: 1.4rem;
@@ -67,6 +66,8 @@ const CardStyle = styled.div`
 	}
 	.card__title {
 		color: ${theme.colors.purple};
+		position: absolute;
+		bottom: 0;
 		width: 100%;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
