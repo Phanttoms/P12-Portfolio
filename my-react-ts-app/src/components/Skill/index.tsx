@@ -26,29 +26,35 @@ export default function Skill() {
 			<div className="skill__container">
 				<div className="skill__container__content">
 					<h3 className="skill__container__content--title">Front-End</h3>
-					<img src={front1} className="skill__container__content--img" />
-					<img src={front2} className="skill__container__content--img" />
-					<img src={front3} className="skill__container__content--img" />
-					<img src={front4} className="skill__container__content--img" />
-					<img src={front5} className="skill__container__content--img" />
-					<img src={front6} className="skill__container__content--img" />
+					<div>
+						<img src={front1} className="skill__container__content--img" />
+						<img src={front2} className="skill__container__content--img" />
+						<img src={front3} className="skill__container__content--img" />
+						<img src={front4} className="skill__container__content--img" />
+						<img src={front5} className="skill__container__content--img" />
+						<img src={front6} className="skill__container__content--img" />
+					</div>
 				</div>
 				<div className="skill__container__content">
 					<h3 className="skill__container__content--title">Back-End</h3>
-					<img src={back1} className="skill__container__content--img" />
-					<img src={back2} className="skill__container__content--img" />
-					<img src={back3} className="skill__container__content--img" />
+					<div>
+						<img src={back1} className="skill__container__content--img" />
+						<img src={back2} className="skill__container__content--img" />
+						<img src={back3} className="skill__container__content--img" />
+					</div>
 				</div>
 				<div className="skill__container__content">
 					<h3 className="skill__container__content--title">
 						Outils et services
 					</h3>
-					<img src={tool1} className="skill__container__content--img" />
-					<img src={tool2} className="skill__container__content--img" />
-					<img src={tool3} className="skill__container__content--img" />
-					<img src={tool4} className="skill__container__content--img" />
-					<img src={tool5} className="skill__container__content--img" />
-					<img src={tool6} className="skill__container__content--img" />
+					<div>
+						<img src={tool1} className="skill__container__content--img" />
+						<img src={tool2} className="skill__container__content--img" />
+						<img src={tool3} className="skill__container__content--img" />
+						<img src={tool4} className="skill__container__content--img" />
+						<img src={tool5} className="skill__container__content--img" />
+						<img src={tool6} className="skill__container__content--img" />
+					</div>
 				</div>
 			</div>
 		</SkillStyle>
@@ -64,6 +70,7 @@ const SkillStyle = styled.section`
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		flex-direction: column;
 		padding: 2rem;
 		margin: 0 3rem;
 		gap: 2rem;
@@ -75,13 +82,13 @@ const SkillStyle = styled.section`
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 10rem;
+			width: 100%;
 			border: 0.1rem solid ${theme.colors.green};
 			background-color: white;
 			box-shadow: 2px 4px 5px rgba(12, 207, 12, 0.616);
 			gap: 1rem;
 			height: 100%;
-			padding-bottom: 1rem;
+
 			&--title {
 				background: linear-gradient(145deg, #444, #222);
 				box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
@@ -91,8 +98,14 @@ const SkillStyle = styled.section`
 				text-align: center;
 				padding: 0.7rem 0;
 			}
+			div {
+				padding: 0.5rem;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
 			&--img {
-				width: 6rem;
+				width: 8rem;
 			}
 		}
 	}
