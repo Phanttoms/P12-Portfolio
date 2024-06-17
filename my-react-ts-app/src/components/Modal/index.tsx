@@ -152,4 +152,9 @@ const ModalContent = styled.div`
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		img {
+			display: none;
+		}
+	}
 `;
