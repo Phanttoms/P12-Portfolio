@@ -142,7 +142,6 @@ const ContactStyle = styled.section`
 			align-items: center;
 			transition: 0.3s ease-in-out;
 			border: 0.2rem solid ${theme.colors.purple};
-			color: white;
 			&:hover {
 				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5),
 					inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 5px rgba(0, 0, 0, 0.3),
@@ -151,6 +150,7 @@ const ContactStyle = styled.section`
 			}
 			p {
 				font-size: 1.2rem;
+				color: black;
 			}
 		}
 	}

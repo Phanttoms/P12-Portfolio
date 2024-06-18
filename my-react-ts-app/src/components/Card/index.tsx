@@ -17,7 +17,11 @@ export default function Card({
 			<div className="card__open">
 				<p>{"[+]"}</p>
 			</div>
-			<img className="card__image" src={`${src}`} alt={title} />
+			<img
+				className="card__image"
+				src={`${src}`}
+				alt={`Image du du site ${title}`}
+			/>
 
 			<h3 className="card__title">{title}</h3>
 		</CardStyle>
