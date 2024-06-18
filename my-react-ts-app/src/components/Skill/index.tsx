@@ -180,6 +180,7 @@ const SkillStyle = styled.section`
 				display: flex;
 				flex-wrap: wrap;
 				gap: 1rem;
+				justify-content: center;
 			}
 
 			&--img {
