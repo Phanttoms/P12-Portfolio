@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://portfolio-gamma-inky-75.vercel.app/sitemap.xml
