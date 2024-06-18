@@ -42,22 +42,22 @@ export default function Header() {
 				<ul>
 					<li onClick={() => scrollToSection("section1")}>
 						<div>
-							<a>Présentation</a>
+							<p>Présentation</p>
 						</div>
 					</li>
 					<li onClick={() => scrollToSection("section2")}>
 						<div>
-							<a>Compétences</a>
+							<p>Compétences</p>
 						</div>
 					</li>
 					<li onClick={() => scrollToSection("section3")}>
 						<div>
-							<a>Mes Projets</a>
+							<p>Mes Projets</p>
 						</div>
 					</li>
 					<li onClick={() => scrollToSection("section4")}>
 						<div>
-							<a>Contact</a>
+							<p>Contact</p>
 						</div>
 					</li>
 				</ul>
@@ -120,6 +120,7 @@ const HeaderStyle = styled.header`
 				clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
 				transition: 0.3s ease-in-out;
 				box-sizing: border-box;
+				cursor: pointer;
 
 				&:hover {
 					clip-path: polygon(70% 0, 100% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
@@ -135,6 +136,7 @@ const HeaderStyle = styled.header`
 					clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
 					transition: 0.3s ease-in-out;
 					box-sizing: border-box;
+					cursor: pointer;
 
 					&:hover {
 						clip-path: polygon(
@@ -147,9 +149,9 @@ const HeaderStyle = styled.header`
 						);
 					}
 
-					a {
+					p {
 						font-size: 1.2rem;
-						text-decoration: none;
+						cursor: pointer;
 					}
 				}
 			}
