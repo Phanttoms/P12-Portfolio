@@ -150,7 +150,7 @@ const ContactStyle = styled.section`
 			}
 			p {
 				font-size: 1.2rem;
-				color: black;
+				color: white;
 			}
 		}
 	}

@@ -20,7 +20,7 @@ export default function Card({
 			<img
 				className="card__image"
 				src={`${src}`}
-				alt={`Image du du site ${title}`}
+				alt={`Image du site ${title}`}
 			/>
 
 			<h3 className="card__title">{title}</h3>
