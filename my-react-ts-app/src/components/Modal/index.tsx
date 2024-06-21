@@ -23,7 +23,7 @@ const Modal = ({
 
 	return (
 		<Overlay>
-			<ModalContent id={content.id}>
+			<ModalContentStyle id={content.id}>
 				<button className="modal__button" onClick={onClose}>
 					X
 				</button>
@@ -58,7 +58,7 @@ const Modal = ({
 						alt={content.nom}
 					/>
 				</div>
-			</ModalContent>
+			</ModalContentStyle>
 		</Overlay>
 	);
 };
@@ -77,7 +77,7 @@ const Overlay = styled.div`
 	justify-content: center;
 `;
 
-const ModalContent = styled.div`
+const ModalContentStyle = styled.div`
 	background: white;
 	padding: 2rem;
 	border-radius: 8px;

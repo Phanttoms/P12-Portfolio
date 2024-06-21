@@ -134,7 +134,7 @@ const ContactStyle = styled.section`
 			width: 15.3rem;
 			height: 3.3rem;
 			border: none;
-			background: ${theme.colors.green};
+			background: linear-gradient(145deg, #005c2f, #00bf63);
 			cursor: pointer;
 			align-self: center;
 			display: flex;
@@ -146,7 +146,7 @@ const ContactStyle = styled.section`
 				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5),
 					inset -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 5px rgba(0, 0, 0, 0.3),
 					-2px -2px 5px rgba(255, 255, 255, 0.3);
-				transform: scale(1.05); /* Augmentez légèrement la taille du bouton */
+				transform: scale(1.05);
 			}
 			p {
 				font-size: 1.2rem;
