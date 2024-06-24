@@ -9,7 +9,7 @@ const Modal = ({
 	content,
 }: {
 	isOpen: boolean;
-	onClose: React.MouseEventHandler<HTMLButtonElement>;
+	onClose: React.MouseEventHandler<HTMLElement>;
 	content: {
 		id: string;
 		nom: string;
@@ -21,8 +21,14 @@ const Modal = ({
 }) => {
 	if (!isOpen || !content) return null;
 
+	const handleOutsideClick = (event: React.MouseEvent<HTMLDivElement>) => {
+		if (event.target === event.currentTarget) {
+			onClose(event);
+		}
+	};
+
 	return (
-		<Overlay>
+		<Overlay id="overlay" onClick={handleOutsideClick}>
 			<ModalContentStyle id={content.id}>
 				<button className="modal__button" onClick={onClose}>
 					X

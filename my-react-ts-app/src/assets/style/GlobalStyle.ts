@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
     h2 {
         font-size: 2.5rem;
     }
+
+    .no-scroll {
+    overflow: hidden;
+}
 `;
 
 export default GlobalStyle;

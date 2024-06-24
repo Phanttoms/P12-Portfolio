@@ -17,16 +17,20 @@ interface Project {
 export default function Projet() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+	const body = document.body;
 
 	const handleCardClick = (project: Project) => {
 		setSelectedProject(project);
 		setIsModalOpen(true);
+		body.classList.add("no-scroll");
 	};
 
 	const handleCloseModal = () => {
 		setIsModalOpen(false);
 		setSelectedProject(null);
+		body.classList.remove("no-scroll");
 	};
+
 	return (
 		<ProjetStyle id="section3">
 			<h2 className="projet__title">Mes Projets</h2>
