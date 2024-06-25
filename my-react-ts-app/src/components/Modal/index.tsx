@@ -1,4 +1,3 @@
-// src/components/Modal.jsx
 import styled from "styled-components";
 import { theme } from "../../assets/style/Theme";
 import logo from "../../assets/images/logos/github-mark-white.png";
